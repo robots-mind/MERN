@@ -6,14 +6,14 @@ module.exports = function validateProfileInput(data) {
 
     data.handle = !isEmpty(data.handle) ? data.handle : '';
     data.status = !isEmpty(data.status) ? data.status : '';
+    data.skills = !isEmpty(data.skills) ? data.skills : '';
     data.status = !isEmpty(data.status) ? data.status : '';
     data.status = !isEmpty(data.status) ? data.status : '';
     data.status = !isEmpty(data.status) ? data.status : '';
     data.status = !isEmpty(data.status) ? data.status : '';
     data.status = !isEmpty(data.status) ? data.status : '';
     data.status = !isEmpty(data.status) ? data.status : '';
-    data.status = !isEmpty(data.status) ? data.status : '';
-    
+
 
     if (!Validator.isEmail(data.email)) {
         errors.email = 'Email is invalid';
