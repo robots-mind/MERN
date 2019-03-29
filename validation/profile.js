@@ -14,17 +14,11 @@ module.exports = function validateProfileInput(data) {
     data.status = !isEmpty(data.status) ? data.status : '';
     data.status = !isEmpty(data.status) ? data.status : '';
 
-
-    if (!Validator.isEmail(data.email)) {
-        errors.email = 'Email is invalid';
+    if(!Validator.isLength(data.handle, {min:2,max:40})) {
+        errors.handle = ' Handle needs to between 2 and 4 characters '
     }
-
-    if (Validator.isEmpty(data.email)) {
-        errors.email = 'Email field is required';
-    }
-
-    if (Validator.isEmpty(data.password)) {
-        errors.password = 'Password field is required';
+    if(!Validator.isLength(data.handle, {min:2,max:40})) {
+        errors.handle = ' Handle needs to between 2 and 4 characters '
     }
 
     return {
